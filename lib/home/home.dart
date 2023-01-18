@@ -6,7 +6,6 @@ class Flipcart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     List l = [
       "img/beauti.jpg",
       "img/electronics.jpg",
@@ -168,45 +167,13 @@ class Flipcart extends StatelessWidget {
                 width: double.maxFinite,
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("img_logo/Addd.jpg"),fit: BoxFit.fill)),
+                        image: AssetImage("img_logo/Addd.jpg"),
+                        fit: BoxFit.fill)),
               ),
-              SizedBox(height: 20,)
-              /*BottomNavigationBar(
-                // fixedColor: Colors.black,
-                backgroundColor: Colors.black,
-                items: const <BottomNavigationBarItem>[
-                  BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.home,
-                      color: Colors.black,
-                      size: 30,
-                    ),
-                    label: 'Home',
-                  ),
-                  BottomNavigationBarItem(
-                      icon: Icon(
-                        Icons.grid_view,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                      label: 'Categories'),
-                  BottomNavigationBarItem(
-                      icon: Icon(
-                        Icons.notifications,
-                        color: Colors.black,
-                        size: 30,
-                      ),
-                      label: 'Notifications'),
-                  BottomNavigationBarItem(
-                    icon: Icon(
-                      Icons.person_rounded,
-                      color: Colors.black,
-                      size: 30,
-                    ),
-                    label: 'Accounts',
-                  ),
-                ],
-              ),*/
+              /*IconButton(onPressed: () {
+                ScaffoldMessenger.of(context)
+                    .showSnackBar(SnackBar(content: Text("hjdcgjhds")));
+              })*/
             ],
           ),
         ),

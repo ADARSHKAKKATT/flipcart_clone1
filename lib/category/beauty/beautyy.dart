@@ -22,57 +22,54 @@ class _BeautiState extends State<Beauti> {
     return Scaffold(
 
       appBar: AppBar(
-        backgroundColor: Colors.pinkAccent,
         title: Text("Beauty Items"),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          GridView.builder(
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: 200,
-                  mainAxisSpacing: 10,
-                  crossAxisSpacing: 10),
-              shrinkWrap: true,
-              itemCount: beauty.length,
-              itemBuilder: (BuildContext context, int index) {
-                return Padding(
-                  padding: const EdgeInsets.only(
-                    top: 10,
-                  ),
-                  child: InkWell(onTap: (){
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => const Btydetail()),
-                    );
 
-                  },
-                    child: Container(
-                      height: 100,
-                      width: 100,
-                      color: Colors.greenAccent,
-                      child: Column(
-                        children: [
-                          SizedBox(
-                            width: 20,
-                            height: 10,
-                          ),
-                          CircleAvatar(
-                            radius: 60,
-                            backgroundImage: AssetImage(beauty[index]),
-                          ),
-                          Text(
-                            det[index],
-                            style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.w600),
-                          ),
-                        ],
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: GridView.builder(
+                  gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 200,
+                      mainAxisSpacing: 10,
+                      crossAxisSpacing: 10),
+                  shrinkWrap: true,
+                  itemCount: beauty.length,
+                  itemBuilder: (BuildContext context, int index) {
+                    return InkWell(onTap: (){
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const Btydetail()),
+                      );
+
+                    },
+                      child: Container(
+                        height: 100,
+                        width: double.maxFinite,
+                        child: Column(mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+
+                            CircleAvatar(
+                              radius: 60,
+                              backgroundImage: AssetImage(beauty[index]),
+                            ),
+                            Text(
+                              det[index],
+                              style: TextStyle(
+                                  fontSize: 15, fontWeight: FontWeight.w600),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
-                  ),
-                );
-              }),
-        ],
+                    );
+                  }),
+            ),
+          ],
+        ),
       ),
     );
   }

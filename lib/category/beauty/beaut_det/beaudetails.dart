@@ -19,11 +19,11 @@ class _BtydetailState extends State<Btydetail> {
       "img_beauty/foundation.jpg"
     ];
     List btdet = [
-      "Blush is one product that gives you an instant healthy and radiant glow. ",
-      "Compact is one product that gives you an instant healthy and radiant glow.",
-      "Contoursticks is one product that gives you an instant healthy and radiant glow.",
-      "Eyeliner is one product that gives you an instant healthy and radiant glow.",
-      "Foundation is one product that gives you an instant healthy and radiant glow.",
+      "ADDIDAS ",
+      "PUMA",
+      "NIKE",
+      "BEEROCK",
+      "AIR",
     ];
     // final p = Provider.of<Favprovider>(context);
     return Scaffold(
@@ -50,14 +50,16 @@ class _BtydetailState extends State<Btydetail> {
                                 image: AssetImage(btph[index]))),
                       ),
 
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 30),
-                        child: Container(
-                          height: 200,
-                          width: 400,
-                          child: Text(btdet[index],
-                            style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                            // style: TextStyle(color: Colors.white),
+                      Expanded(
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 30),
+                          child: Container(
+                            height: double.maxFinite,
+                            width: double.maxFinite,
+                            child: Text(btdet[index],
+                              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                              // style: TextStyle(color: Colors.white),
+                            ),
                           ),
                         ),
                       ),
